@@ -1,1 +1,1 @@
-[Navigation](https://adiletttt.github.com/neobis)
+[Navigation](https://adiletttt.github.io/neobis)
