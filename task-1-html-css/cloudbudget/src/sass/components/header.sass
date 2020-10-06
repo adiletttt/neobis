@@ -1,0 +1,93 @@
+.header
+  padding: 50px var(--container)
+  display: flex
+  align-items: center
+
+  &__overlay
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 2
+    background-color: rgba(0, 0, 0, 0.4)
+    pointer-events: none
+    opacity: 0
+    transition: opacity 300ms ease
+
+    &--darken
+      pointer-events: all
+      opacity: 1
+
+
+  &__adaptive-menu
+    display: flex
+    width: 100%
+    align-items: center
+
+  &__logo
+    margin-right: 100px
+
+  &__nav
+    margin-right: auto
+
+  &__lang-select
+    margin-right: 28px
+
+  @media (min-width: 1070px)
+    &__overlay,
+    &__hamburger
+      display: none
+
+  @media (max-width: 1070px)
+    justify-content: space-between
+
+    &__logo
+      margin-right: auto
+
+    &__adaptive-menu
+      background-color: $primary
+      box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2)
+      position: fixed
+      left: 0
+      top: 0
+      height: 100%
+      width: 100%
+      max-width: 280px
+      flex-flow: column
+      z-index: 3
+      transform: translateX(-100%)
+      transition: transform 300ms ease
+
+      &--open
+        transform: translateX(0)
+
+
+    &__hamburger
+      width: 40px
+      height: 40px
+      display: flex
+      background-color: transparent
+      border: 1px solid #fff
+      border-radius: 4px
+
+      svg
+        width: 100%
+        height: 100%
+        fill: white
+
+    &__nav
+      flex-flow: column
+      margin: 0 0 30px
+      align-items: center
+      padding-top: 20px
+      width: 100%
+
+    .nav__link:not(:last-child)
+      margin-right: 0
+
+    .nav__link
+      padding: 10px
+
+    &__lang-select
+      margin: 0 0 30px

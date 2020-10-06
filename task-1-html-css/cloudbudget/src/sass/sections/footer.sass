@@ -1,0 +1,91 @@
+.footer
+  padding: 85px var(--container)
+  background-color: #FAFAFA
+
+  @media (max-width: 770px)
+    &__wrapper
+      flex-flow: column
+      align-items: center
+      text-align: center
+
+    &__block
+      margin-bottom: 30px
+
+    &__social-list
+      justify-content: center
+
+    .copyright
+      text-align: center
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    margin-bottom: 65px
+
+  &__block
+    max-width: 254px
+    width: 100%
+
+  &__title
+    font-size: 18px
+    font-weight: bold
+    margin: 0 0 33px
+
+  &__addr
+    font-size: 12px
+    line-height: 150%
+    margin: 0
+
+  &__contacts-list
+    display: flex
+    flex-flow: column
+    margin-bottom: 21px
+
+  &__contacts__link
+    text-decoration: none
+    color: #000
+    font-size: 12px
+
+    &:first-child
+      margin-bottom: 11px
+
+  &__social-list
+    display: flex
+
+  $icons: 1 '../img/icons/fb.svg', 2 '../img/icons/in.svg', 3 '../img/icons/tw.svg'
+
+  &__social-link
+    width: 14px
+    height: 14px
+    background-position: center
+    background-size: contain
+
+    &:not(:last-child)
+      margin-right: 12px
+
+    @each $icon in $icons
+      &:nth-child(#{nth($icon, 1)})
+        background-image: url(nth($icon, 2))
+
+
+
+  
+
+.services
+  margin: 0
+  padding: 0
+  list-style: none
+
+.services__item
+  margin-bottom: 2px
+
+.services__link
+  text-decoration: none
+  color: #000
+  font-size: 12px
+
+
+
+.copyright
+  font-size: 12px
+  margin: 0

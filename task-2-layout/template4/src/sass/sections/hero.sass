@@ -1,0 +1,69 @@
+.hero
+  background: url('~img/hero.jpg') center / cover no-repeat
+  color: #fff
+  padding: 0 0 335px
+
+  &__title
+    color: #fff
+    max-width: 700px
+    margin: 0 auto 50px
+
+  &__subtitle
+    font-size: 16px
+    font-weight: 500
+    line-height: 20px
+    margin-bottom: 20px
+
+  &__wrapper
+    text-align: center
+    padding: 0 var(--container)
+
+  @media (max-width: 550px)
+    padding-bottom: 30px
+
+
+.header
+  border-bottom: 1px solid rgba(161, 161, 161, 0.5)
+  padding: 0 var(--container)
+  margin-bottom: 220px
+
+  @media (max-width: 550px)
+    margin-bottom: 30px
+
+.nav
+  display: flex
+  justify-content: flex-end
+
+  &__link
+    font-size: 16px
+    font-weight: 500
+    color: #fff
+    text-decoration: none
+    margin-right: 40px
+    padding: 40px 0
+    position: relative
+
+    &:last-child
+      margin-right: 0
+
+    &::after
+      content: ''
+      position: absolute
+      height: 2px
+      width: 0%
+      background: #fff
+      bottom: -1.5px
+      left: -10%
+      transition: width 300ms ease 
+
+    &:hover::after
+      width: 120%
+
+  @media (max-width: 640px)
+    flex-flow: column 
+
+    &__link
+      padding: 15px 0
+      text-align: center
+      margin: 0
+    margin: 0

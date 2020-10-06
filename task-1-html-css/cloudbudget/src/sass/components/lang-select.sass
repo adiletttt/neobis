@@ -1,0 +1,27 @@
+.lang-select
+  display: flex
+  color: #fff
+  align-items: center
+  position: relative
+  padding-right: 27px
+  padding-left: 43px
+
+  &::before
+    content: ''
+    position: absolute
+    width: 32px
+    height: 32px
+    top: calc(50% - 32px / 2)
+    left: 0
+    background-image: url('../img/icons/eng.svg') 
+    background-position: center
+    background-size: contain
+    
+  &::after
+    content: ''
+    position: absolute
+    width: 12px
+    height: 7px
+    top: calc(50% - 7px / 2)
+    right: 0
+    background-image: url('../img/icons/caret-down.svg')

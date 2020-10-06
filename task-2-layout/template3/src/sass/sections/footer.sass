@@ -1,0 +1,37 @@
+.footer
+  background: var(--primary)
+  padding: 50px var(--container)
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  &__name,
+  &__copyright
+    color: #fff
+
+  &__name
+    font-size: 21px
+    margin-bottom: 20px
+
+  &__copyright
+    font-size: 13px
+
+  &__social
+    display: flex
+
+  &__link
+    width: 43px 
+    height: 22px
+    margin-right: 21px
+    background: url('~img/icons/vk.svg') center / contain no-repeat
+    display: inline-block
+
+    &:last-child
+      margin-right: 0
+
+  @media (max-width: 480px)
+    flex-flow: column
+    text-align: center
+
+    &__info
+      margin-bottom: 20px

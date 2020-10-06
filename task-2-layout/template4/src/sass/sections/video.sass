@@ -1,0 +1,51 @@
+.video
+  background: url('~img/work.jpg') center / cover no-repeat
+  padding: 70px var(--container) 0
+  text-align: center
+  margin-bottom: 80px
+
+  &__title
+    margin-bottom: 30px
+    color: #fff
+
+  &__desc
+    color: #fff
+
+  &__img
+    max-width: 970px
+    width: 100%
+
+  &__wrapper
+    display: flex
+    justify-content: center
+    transform: translateY(80px)
+    position: relative
+
+  &__button
+    color: #fff
+    position: absolute
+    text-decoration: none
+    border: 1px solid #fff
+    border-radius: 200px
+    padding: 40px 40px 40px 121px
+    top: calc(50% - 51px)
+
+    &::before
+      content: ''
+      position: absolute
+      width: 60px
+      height: 60px
+      background: url('~img/icons/play.svg')
+      left: 40px
+      top: calc(50% - 30px)
+
+  @media (max-width: 600px)
+    &__button
+      padding: 0 
+      font-size: 0
+      border: 0
+
+      &::before
+        left: -30px
+        top: 15px
+      

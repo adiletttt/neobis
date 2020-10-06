@@ -1,0 +1,36 @@
+.header
+  padding: 35px calc((100% - 1370px) / 2)
+  align-items: center
+  +justify-between
+
+  @media (max-width: 1400px)
+    padding: 35px 25px
+
+  @media (max-width: 660px)
+    flex-flow: column
+    
+    > *:not(:last-child)
+      margin-bottom: 25px 
+
+.nav
+  display: flex
+
+  &__link
+    text-decoration: none
+    color: #000
+    +margin-side(right, 31px)
+
+  @media (max-width: 420px)
+    flex-flow: column
+    align-items: center
+
+    &__link
+      +margin-side(right, 0)
+      +margin-side(bottom, 20px)
+
+.logo
+  width: 41px
+  height: 39px
+  display: flex
+  align-items: flex-end
+  

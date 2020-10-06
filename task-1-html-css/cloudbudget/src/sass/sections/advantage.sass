@@ -1,0 +1,87 @@
+.advantage
+  padding: 95px var(--container)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: $primary
+
+  @media (max-width: 600px)
+    &__img-wrapper
+      &::before,
+      &::after
+        display: none
+
+  @media (max-width: 1240px)
+    --container: 50px
+
+  @media (max-width: 1050px)
+    flex-flow: column 
+
+    &__info
+      margin-bottom: 30px
+
+  &__info,
+  &__img-wrapper
+    max-width: 445px
+
+  &__info
+    color: #fff
+
+  &__title
+    font-size: 36px
+    font-weight: bold
+    margin: 0 0 43px
+
+  &__desc
+    line-height: 140%
+    margin: 0 0 42px
+
+  &__links
+    display: flex
+
+  $icons: '../img/icons/googleplay.svg', '../img/icons/appstore.svg', '../img/icons/windows.svg'
+
+  &__link
+    width: 32px
+    height: 32px
+    background-position: center
+    background-size: contain
+
+    @for $i from 1 to 4
+      &:nth-child(#{$i})
+        background-image: url(nth($icons, $i))
+
+  
+
+    &:not(:last-child)
+      margin-right: 23px
+
+  &__img
+    width: 100%
+    border-radius: 15px
+    
+  &__img-wrapper
+    display: flex
+    position: relative
+
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      max-width: 44px
+      max-height: 267px
+      width: 100%
+      height: 100%
+      top: calc(50% - 267px / 2)
+      opacity: 0.5
+
+    &::before
+      left: -44px
+      border-radius: 15px 0 0 15px
+      background-image: url('../img/v1.jpg')
+
+    &::after
+      right: -44px
+      border-radius: 0 15px 15px 0
+      background-image: url('../img/v2.jpg')
+      background-position: right

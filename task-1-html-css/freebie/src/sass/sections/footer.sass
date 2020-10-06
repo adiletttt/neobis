@@ -1,0 +1,68 @@
+.footer
+  padding-top: 106px
+  padding-bottom: 35px
+  background: #FAFAFA
+  display: flex
+  flex-flow: column
+  align-items: center
+
+  &__nav
+    display: flex
+    align-items: center
+    border-bottom: 1px solid #000
+    max-width: 1000px
+    width: 100%
+    justify-content: center
+    padding-bottom: 43px
+    margin-bottom: 55px
+
+  &__link
+    color: #000
+    text-decoration: none
+    font-size: 14px
+    font-weight: 600
+    +margin-side(right, 80px)
+
+  &__logo
+    margin: 0 140px 0 80px
+
+  &__logo
+
+    path
+      fill: var(--primary)
+
+
+  &__social
+    display: flex
+    margin-bottom: 72px
+
+  &__icon
+    width: 38px
+    height: 38px
+    +margin-side(right, 25px)
+
+
+@media (max-width: 720px)
+  .footer
+    &__nav
+      flex-flow: column
+
+    &__link
+      +margin-side(right, 0)
+      margin-bottom: 20px
+
+    &__logo
+      margin: 0 0 20px
+
+
+.copyright
+  font-size: 14px
+  color: #000
+  display: flex
+
+  &__text
+    margin-right: 14px
+
+  &__link
+    text-decoration: none
+    color: #000

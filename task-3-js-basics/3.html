@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Task 3</title>
+</head>
+<body>
+  <ol id="todo-list"></ol>
+
+  <script>
+    const tasks = ['Buy lemonade', 'Make toasts', 'Repair car', 'Play games', 'Pet a cat']
+    const list = document.querySelector('#todo-list')
+
+    tasks.forEach(task => {
+      const row = document.createElement('li')
+
+      row.classList.add('task')
+      row.textContent = task
+
+      list.appendChild(row)
+    })
+  </script>
+</body>
+</html>

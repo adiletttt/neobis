@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <div class="element">Element 1</div>
+  <div class="element">Element 2</div>
+  <div class="element">Element 3</div>
+  <div class="element">Element 4</div>
+  <div class="element">Element 5</div>
+  <div class="element">Element 6</div>
+
+  <script>
+      const rows = document.querySelectorAll('.element')
+      
+      rows.forEach((row, index) => {
+        if (index <= 2) row.style.background = 'red'
+        else row.style.background = 'green'
+      })
+  </script>
+</body>
+</html>

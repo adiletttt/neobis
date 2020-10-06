@@ -1,0 +1,419 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  --primary-color: #f44c2e;
+  --primary-color--darken: #da2a0b;
+  --gray-text-color: #bac0cf; 
+  --container: calc((100% - 960px) / 2);
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 25px var(--container);
+  display: flex;
+  align-items: center;
+  background-color: #fbfbfb;
+}
+
+.header__nav {
+  margin-right: auto;
+}
+
+.header__phone {
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 25px;
+}
+
+.main {
+  flex: 1;
+}
+
+
+
+.title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+
+
+.button {
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.button:hover {
+  background-color: var(--primary-color--darken);
+}
+
+.button--outlined {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.button--outlined:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+
+
+
+
+
+.nav {
+  display: flex;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  transition: color 300ms ease;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: var(--primary-color);
+  bottom: -2px;
+  left: 0;
+  transition: width 300ms ease;
+}
+
+.nav__link:hover {
+  color: var(--primary-color);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.nav__link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav--vertical {
+  flex-flow: column;
+}
+
+.nav--vertical .nav__link::after {
+  display: none;
+}
+
+.nav--vertical .nav__link {
+  margin-bottom: 10px;
+}
+
+
+
+.hero {
+  position: relative;
+  background-color: #fbfbfb;
+  padding: 120px var(--container) 150px;
+  background-image: url('./img/Dmitry Alekseev.png');
+  background-size: 450px;
+  background-repeat: no-repeat;
+  background-position: calc(50% + 420px) bottom;
+}
+
+.hero__title {
+  font-size: 46px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+.hero__subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 30px;
+  color: var(--gray-text-color);
+}
+
+
+
+
+.services {
+  padding: 60px var(--container);
+  text-align: center;
+}
+
+.services__title {
+  margin-bottom: 50px;
+}
+
+.services__items {
+  display: flex;
+  margin: 0 -20px 50px;
+}
+
+.services__item {
+  text-align: center;
+  position: relative;
+  padding: calc(74px + 15px) 0 0 0;
+  margin: 0 20px;
+}
+
+.services__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(50% - 74px / 2);
+  width: 74px;
+  height: 74px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.services__item:nth-child(1)::before {
+  background-image: url('./img/icons/tools-and-utensils.png');
+}
+
+.services__item:nth-child(2)::before {
+  background-image: url('./img/icons/responsive.png');
+}
+
+.services__item:nth-child(3)::before {
+  background-image: url('./img/icons/programming.png');
+}
+
+.services__item:nth-child(4)::before {
+  background-image: url('./img/icons/coding (1).png');
+}
+
+.services__desc {
+  color: var(--gray-text-color);
+}
+
+
+
+
+
+
+.portfolio {
+  padding: 50px var(--container);
+  text-align: center;
+  background-color: #fbfbfb;
+}
+
+.portfolio__title {
+  margin-bottom: 50px;
+}
+
+.portfolio__items {
+  display: flex;
+  margin: 0 -10px 50px;
+}
+
+.portfolio__item {
+  margin: 0 10px;
+}
+
+.portfolio__img {
+  width: 100%;
+}
+
+.portfolio__desc {
+  color: var(--gray-text-color);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+
+
+
+
+.price {
+  background-color: var(--primary-color);
+  padding: 50px var(--container);
+  color: #fff;
+}
+
+.price__title {
+  margin-bottom: 30px;
+}
+
+.text-gray {
+  color: var(--gray-text-color);
+}
+
+
+
+
+.contacts {
+  padding: 50px var(--container);
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__data-item {
+  font-size: 18px;
+  margin: 0 0 20px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.contacts__data-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.contacts__data-item::before {
+  width: 18px;
+  height: 18px;
+  background-image: url('./img/icons/call-answer (1).png');
+}
+
+.contacts__data-item:nth-child(2)::before {
+  width: 23px;
+  height: 15px;
+  top: 2px;
+  background-position: center;
+  background-image: url('./img/icons/envelope (1).png');
+}
+
+.contacts__button {
+  margin-bottom: 30px;
+}
+
+.contacts__social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__link {
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contacts__link--vk {
+  background-image: url('./img/icons/vk (1).png');
+}
+
+.contacts__link--fb {
+  background-image: url('./img/icons/facebook-logo (1).png');
+}
+
+.contacts__link--tw {
+  background-image: url('./img/icons/twitter-logo-silhouette.png');
+}
+
+.contacts__link--inst {
+  background-image: url('./img/icons/instagram-social-network-logo-of-photo-camera.png');
+}
+
+
+
+
+.footer {
+  text-align: center;
+  color: #fff;
+  background-color: #31293c;
+  padding: 25px;
+}
+
+
+
+
+@media (max-width: 1000px) {
+  :root {
+    --container: 20px;
+  }
+
+  .hero {
+    background-position: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .hero {
+    background-image: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-flow: column;
+  }
+
+  .header__nav {
+    margin: 0 0 20px;
+  }
+
+  .header__phone {
+    margin: 0 0 20px;
+  }
+
+
+  .services__item {
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+
+  .services__items {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 680px) {
+  .services__items {
+    justify-content: center;
+  }
+
+
+  .contacts {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .contacts__nav,
+  .contacts__data {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  .portfolio__items {
+    flex-flow: column;
+  }
+
+  .portfolio__item {
+    margin-bottom: 30px;
+  }
+}

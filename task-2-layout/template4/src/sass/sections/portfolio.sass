@@ -1,0 +1,29 @@
+.portfolio
+  padding: 100px var(--container) 130px
+  background: #F6F6F8
+  text-align: center
+
+  &__title
+    margin-bottom: 50px
+
+  &__desc
+    max-width: 730px
+    margin: 0 auto 70px
+
+  &__items
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 50px
+
+  &__img
+    max-width: 255px
+    border-radius: 10px
+
+  @media (max-width: 1140px)
+    &__items
+      justify-content: space-evenly
+
+    &__img
+      margin-bottom: 30px
+

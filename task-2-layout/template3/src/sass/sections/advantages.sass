@@ -1,0 +1,35 @@
+.advantages
+  background: var(--primary)
+  padding: 100px var(--container)
+  color: #fff
+  display: grid
+  grid-template-columns: repeat(6, 1fr)
+
+  &__item
+    display: flex
+    align-items: center
+
+  &__count
+    font-weight: 500
+    font-size: 21px
+
+  &__info
+    padding-top: 4px
+
+  &__icon
+    width: 46px
+    height: 50px
+    background: url('~img/icons/adv.svg') center / contain no-repeat
+    margin-right: 20px
+
+  @media (max-width: 1060px)
+    grid-template-columns: repeat(3, 1fr) 
+    grid-row-gap: 20px
+    justify-items: center
+
+  @media (max-width: 520px)
+    grid-template-columns: repeat(2, 1fr)
+
+  @media (max-width: 400px)
+    grid-template-columns: 1fr
+    grid-row-gap: 30px

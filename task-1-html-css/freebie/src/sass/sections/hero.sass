@@ -1,0 +1,67 @@
+.hero
+  padding: 0 calc((100% - 1440px) / 2)
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: repeat(2, minmax(700px, 1fr))
+
+  &__img,
+  &__secondary-img
+    height: 100%
+    object-fit: cover
+
+  &__primary
+    padding: 154px 126px 135px 162px
+
+  &__secondary
+    padding: 164px 166px 104px 102px
+
+  &__primary,
+  &__secondary
+    background: #F1F1F2
+    flex-flow: column
+    display: flex
+
+  &__title
+    font-size: 56px
+    font-weight: 600
+    line-height: 69px
+    margin-bottom: 35px
+
+    @media (max-width: 450px)
+      font-size: 30px
+      line-height: normal
+
+  &__subtitle
+    font-size: 20px
+    line-height: 140.62%
+    margin-bottom: 52px
+
+  &__secondary-title
+    font-size: 32px
+    font-weight: 400
+    margin-bottom: 23px
+
+  &__secondary-subtitle
+    font-size: 20px
+    text-align: justify
+    margin-bottom: 35px
+
+  &__button
+    align-self: flex-start
+    margin-top: auto
+    
+
+  @media (max-width: 1278px)
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, minmax(300px, 1fr))
+
+    &__secondary-img
+      order: 2
+
+    &__secondary
+      order: 1
+
+    &__primary,
+    &__secondary
+      padding: 30px
+

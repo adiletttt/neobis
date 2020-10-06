@@ -1,0 +1,71 @@
+.about
+  padding: 110px var(--container) 105px
+  display: flex
+  flex-flow: column
+  justify-content: center
+
+  &__title,
+  &__desc
+    text-align: center
+    max-width: 739px
+    margin: 0 auto
+
+  &__title
+    margin-bottom: 50px
+
+  &__desc
+    margin-bottom: 70px
+
+  &__items
+    display: flex
+    justify-content: space-between
+    margin-bottom: 55px
+    flex-wrap: wrap
+
+  &__button
+    margin: 0 auto
+
+  @media (max-width: 1100px)
+    &__items
+      justify-content: space-around
+
+    &__item
+      margin-bottom: 30px
+
+    &__item:last-child
+      margin-bottom: 0
+  
+
+
+.info-block
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+  &__icon
+    min-width: 110px
+    min-height: 110px
+    background: url('~img/icons/project.svg') center / 40px no-repeat
+    border: 1px solid #e0e0e0
+    position: relative
+    border-radius: 100%
+    margin-right: 17px
+
+    &::before
+      content: '' 
+      width: 90px
+      height: 90px
+      position: absolute
+      top: calc(50% - 45px)
+      left: calc(50% - 45px)
+      border: 1px solid var(--primary)
+      border-radius: 100%
+      
+  &__inner
+    max-width: 222px
+
+  &__title
+    margin: 45px 0 12px
+
+  &__desc
+    font-size: 14px

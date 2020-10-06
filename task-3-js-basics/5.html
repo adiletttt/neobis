@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Task 4</title>
+</head>
+<body>
+  <div id="cart-items">
+    <div class="item">Milk 1 l.<span class="qty">x 2</span></div>
+    <div class="item">Cola 1.5 l. <span class="qty">x 1</span></div>
+    <div class="item">Bread<span class="qty">x 2</span></div>
+    <div class="item">Cheese<span class="qty">x 1</span></div>
+    <div class="item">Chocolate bar<span class="qty">x 3</span></div>
+  </div>
+
+  <script>
+    const items = document.querySelector('#cart-items')
+
+    Array.from(items.children).forEach(item => {
+      if (item.textContent.includes('Cola')) item.remove()
+      if (item.textContent.includes('Chocolate')) {
+        const newItem = document.createElement('div')
+        const newQnty = document.createElement('span')
+
+        newItem.classList.add('item')
+        newQnty.classList.add('qty')
+
+        newItem.textContent = 'Canned Fish'
+        newQnty.textContent = 'x 4'
+
+        newItem.append(newQnty)
+
+        items.replaceChild(newItem, item)
+      }
+    })
+  </script>
+</body>
+</html>

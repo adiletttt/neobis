@@ -1,0 +1,57 @@
+.mailing
+  padding: 85px var(--container)
+  text-align: center
+
+  &__title
+    margin-bottom: 20px
+
+  &__wrapper
+    margin-bottom: 30px
+    border-top: 1px solid #E0E0E0
+    padding-top: 85px
+
+
+  &__form
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto 35px
+    max-width: 489px
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25)
+    border-radius: 30px
+
+  &__label
+    height: 45px
+    flex: 1
+
+  &__input
+    height: 100%
+    border-radius: 30px 0 0 30px
+    border: 1px solid #F2F2F2
+    padding-left: 33px
+    width: 100%
+
+    &::placeholder
+      font-size: 13px
+      color: #999
+
+  &__button
+    border-radius: 0 30px 30px 0
+    cursor: pointer
+    padding-bottom: 14px
+
+  &__warning
+    font-size: 13px
+
+
+  @media (max-width: 450px)
+    &__form
+      flex-flow: column
+      box-shadow: none
+
+    &__input,
+    &__button
+      border-radius: 30px
+
+    &__label
+      margin-bottom: 20px

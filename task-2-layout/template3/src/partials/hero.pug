@@ -1,0 +1,18 @@
+section.hero
+  header.header
+    a.header__logo.logo(href='#')
+      img.logo__img(src='./img/icons/logo.svg')
+
+    nav.nav
+      each link in ['Главная', 'Об Авторе', 'Работы', 'Процесс', 'Контакты']
+        a.nav__link(href='#')= link
+
+  .hero__wrapper
+    .hero__img-wrapper
+      img.hero__img(src='./img/screen.png' alt='Design and markup')
+
+    .hero__info
+      h1.hero__title Дизайн и верстка
+      p.hero__desc
+        | Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+      a.button(href='#') Написать мне

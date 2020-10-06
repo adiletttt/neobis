@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+
+body
+  font-family: Lato
+  font-size: 14px
+  margin: 0
+
+$container: calc((100% - 1110px) / 2)
+$primary: #ED4C5C
+
+:root
+  --container: calc((100% - 1110px) / 2)
+
+  @media (max-width: 1150px)
+    --container: 25px

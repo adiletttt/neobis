@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+  <div id="string-1">Ядра в вёдра, выдру в тундру!</div>
+  <div id="string-2">Выдрав с выдры в тундре гетры</div>
+  <div id="string-3">В недрах тундры, выдры в гетрах </div>
+  <div id="string-4">Вытру гетрой выдре морду </div>
+  <div id="string-5">Тырят в вёдра ядра кедров!</div>
+  <div id="string-6">Вытру выдрой ядра кедров</div>
+
+  <script>
+    let rows = []
+
+    for (let i = 1; i <= 6; i++) {
+      const row = document.querySelector(`#string-${i}`)
+      rows.push(row)
+    }
+
+    const order = [
+      'string-3',
+      'string-5',
+      'string-2',
+      'string-6',
+      'string-4',
+      'string-1'
+    ]
+
+    order.forEach(id => {
+      const row = rows.find(row => row.id === id)
+      console.log(row.textContent)
+    })
+  </script>
+</body>
+</html>

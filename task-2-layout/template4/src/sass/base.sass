@@ -1,0 +1,88 @@
+:root
+  --primary: #4985FF
+  --container: calc((100% - 1110px) / 2)
+
+  @media (max-width: 1150px)
+    --container: 25px
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+html, body
+  height: 100%
+
+body
+  font-family: Montserrat, Helvetica, Arial, sans-serif
+  font-size: 16px
+  line-height: 25px
+  margin: 0
+
+h6, h5, h4, h3, h2, h1
+  line-height: normal
+  color: #323232
+
+
+h6, h5, h4, h3, h2, h1, p 
+  margin: 0
+
+h1
+  font-weight: 800
+  font-size: 48px
+  line-height: 64px
+
+h2
+  font-weight: bold
+  font-size: 36px
+  line-height: 53px
+
+h3
+  font-weight: 600
+  font-size: 18px
+  line-height: 22px
+  color: #000
+
+a
+  line-height: 20px
+  font-weight: 500
+  color: var(--primary)
+
+.text
+  color: #999999
+  line-height: 25px
+  font-size: 16px
+  font-weight: normal
+
+.title
+  font-size: 36px
+  line-height: 53px
+  color: #323232
+
+.page
+  height: 100%
+  display: flex
+  flex-flow: column
+
+.main
+  flex: 1
+
+.footer
+  margin-top: auto
+
+.button
+  background: var(--primary)
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25)
+  border-radius: 30px
+  color: #fff
+  text-decoration: none
+  font-size: 16px
+  font-weight: 500
+  padding: 13px 36px
+  display: inline-block
+  border: 0
+
+
+@media (max-width: 440px)
+  .title
+    font-size: 26px

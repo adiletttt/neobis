@@ -1,0 +1,7 @@
+=justify-between
+  display: flex
+  justify-content: space-between
+
+=margin-side($side, $length)
+  &:not(:last-child)
+    margin-#{$side}: $length

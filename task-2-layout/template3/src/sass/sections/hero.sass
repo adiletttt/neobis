@@ -1,0 +1,84 @@
+.hero
+  background: #EEEFF1
+  padding: 57px 0 146px 0
+
+  &__wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__info
+    max-width: 540px
+
+  &__title
+    font-size: 48px
+    margin-bottom: 60px
+
+  &__desc
+    margin-bottom: 60px
+
+  &__img-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 130px
+
+  @media (max-width: 1060px)
+    &__wrapper
+      flex-flow: column
+      text-align: center
+      padding: 0 20px
+
+    &__img-wrapper
+      margin: 0 0 20px
+
+    &__img
+      max-width: 250px
+
+
+
+.header
+  padding: 0 var(--container)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 140px
+
+  @media (max-width: 820px)
+    flex-flow: column
+
+.nav
+  display: flex
+
+  &__link
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    text-decoration: none
+    color: #000
+    margin-right: 42px
+
+    &:hover
+      color: var(--primary)
+
+    &--active
+      color: var(--primary)
+      font-weight: 500
+      
+
+  &__link:last-child
+    margin-right: 0
+
+  @media (max-width: 820px)
+    flex-flow: column
+
+    &__link
+      margin: 0 0 15px
+      text-align: center
+  
+.logo
+  display: flex
+
+  @media (max-width: 820px)
+    margin-bottom: 25px
+
+

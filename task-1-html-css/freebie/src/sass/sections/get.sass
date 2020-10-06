@@ -1,0 +1,31 @@
+.get
+  padding-top: 81px
+  padding-bottom: 69px
+  align-items: center
+  background: var(--primary)
+  +justify-between
+
+  &__title,
+  &__subtitle
+    font-size: 32px
+    line-height: 140.62%
+    font-size: 32px
+
+  &__info
+    margin-right: auto
+
+  &__button:first-of-type
+    margin-right: 16px
+
+  @media (max-width: 850px)
+    flex-flow: column
+    align-items: center
+
+    &__info
+      margin: 0 0 30px
+
+    &__button:first-of-type
+      margin: 0 0 20px
+    
+  @media (max-width: 440px)
+    text-align: center

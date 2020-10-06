@@ -1,0 +1,51 @@
+.skills
+  padding: 100px var(--container)
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &__title
+    margin-bottom: 50px
+
+  &__item
+    position: relative
+    margin-bottom: 54px
+
+    &:last-child
+      margin-bottom: 0
+
+    &::after,
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      max-width: 445px
+      height: 4px
+      bottom: -19px
+      left: 0
+
+    &::before
+      background: #C4C4C4
+
+    &::after
+      background: var(--primary)
+      width: 65%
+
+  &__pic,
+  &__list
+    flex: 1
+
+  &__pic
+    display: flex
+
+  &__img
+    width: 100%
+
+  @media (max-width: 1060px)
+    flex-flow: column
+
+    &__list
+      margin-bottom: 50px
+
+    &__img
+      max-width: 500px

@@ -1,0 +1,80 @@
+.footer
+  padding: 70px var(--container) 30px
+  background: #F6F6F8
+
+  &__blocks
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    border-bottom: 1px solid #E0E0E0
+    padding-bottom: 70px
+    margin: 0 -10px 30px
+
+  &__block
+    flex: 1
+    max-width: 250px
+    padding: 0 10px 
+    flex-basis: 250px
+
+    &:first-child
+      .footer__info
+        padding-left: 30px
+
+        &::before
+          width: 15px
+          height: 15px
+          top: calc(50% - 7.5px)
+
+        &:nth-child(1)::before
+          background: url('~img/icons/mail.svg') center / contain no-repeat
+
+        &:nth-child(2)::before
+          background: url('~img/icons/phone.svg') center / contain no-repeat
+
+        &:nth-child(3)::before
+          background: url('~img/icons/mark.svg') center / contain no-repeat
+
+  &__info-wrapper
+    display: flex
+    flex-flow: column
+
+  &__title
+    margin-bottom: 35px
+
+  &__info
+    color: #999999
+    font-size: 14px
+    font-weight: normal
+    text-decoration: none
+    position: relative
+    margin-bottom: 30px
+    padding-left: 17px
+
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 5px
+      width: 5px
+      height: 9px
+      background: url('~img/icons/right.svg')
+
+    &:last-child
+      margin-bottom: 0
+
+  &__copy
+    font-size: 13px
+    color: #999
+    font-weight: normal
+    text-align: center
+
+
+  @media (max-width: 1030px)
+    &__blocks
+      justify-content: space-evenly
+
+    &__block
+      margin-bottom: 30px
+
+    &__block:last-child
+      margin-bottom: 0

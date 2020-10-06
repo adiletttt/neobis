@@ -1,0 +1,79 @@
+.contact
+  padding: 117px var(--container) 78px
+  display: flex
+  justify-content: space-between
+
+  @media (max-width: 920px)
+    flex-flow: column
+    align-items: center
+    text-align: center
+
+    &__info
+      margin-bottom: 30px
+
+    .form__button
+      align-self: center
+
+
+  &__info
+    max-width: 434px
+    width: 100%
+
+  &__title
+    font-size: 36px
+    font-weight: bold
+    margin: 0 0 50px
+
+  &__desc
+    line-height: 140%
+    margin: 0
+
+  &__form
+    max-width: 540px
+    width: 100%
+
+
+
+.form
+  display: flex
+  flex-flow: column
+
+  & > * 
+    flex: 1 1 60px
+
+  
+  &__row
+    display: flex
+    margin-bottom: 24px
+
+    @media (max-width: 550px)
+      flex-flow: column
+
+      .form__label:first-child
+        margin-bottom: 24px
+
+    .form__label
+      width: 100%
+
+    .form__label:first-child
+      margin-right: 30px
+  
+  & > &__label:not(:last-child)
+    margin-bottom: 24px
+    
+  &__input
+    width: 100%
+    height: 100%
+    padding: 21px 31px 17px
+    border: 1px solid #333
+    border-radius: 6px
+    font-size: 16px
+
+    &::placeholder
+      color: rgba(19, 39, 67, 0.5)
+      font-size: 16px
+
+  &__button
+    flex-basis: 50px
+    align-self: flex-start
+

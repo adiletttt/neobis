@@ -1,0 +1,55 @@
+.features
+  padding: 63px var(--container) 124px
+  background-color: #FAFAFA
+
+  @media (max-width: 1150px)
+    &__item
+      margin-right: 25px
+
+    &__item:last-child
+      margin-right: 0
+
+  @media (max-width: 900px)
+    &__item
+      margin: 0 0 30px
+
+    &__cards
+      flex-flow: column
+      align-items: center
+
+  &__cards
+    display: flex
+    justify-content: space-between
+
+  &__title
+    font-size: 36px
+    font-weight: bold
+    text-align: center
+    margin: 0 0 70px
+
+.feature
+  max-width: 350px
+  display: flex
+  flex-flow: column
+
+  &__info
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1)
+    border-radius: 8px
+    margin: -95px auto 0
+    max-width: 293px
+    min-height: 198px
+    background-color: #fff
+    text-align: center
+    padding: 33px 32px 25px
+
+  &__title
+    font-size: 18px
+    font-weight: bold
+    margin: 0 0 20px
+  
+  &__desc
+    font-size: 12px
+    margin: 0 0 30px
+
+  &__img
+    width: 100%
