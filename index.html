@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Neobis study-plan</title>
+</head>
+<body>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .page {
+      padding: 30px calc((100% - 1140px) / 2);
+    }
+
+    @media (max-width: 1180px) {
+      .page {
+        padding: 30px 25px;
+      }
+    }
+
+    .primary-title {
+      font-weight: normal;
+    }
+
+    .item {
+      box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+      padding: 5px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+      background: #fff;
+      transition: all 150ms ease;
+    }
+
+    .item:hover {
+      background: #f7f7f7;
+    }
+
+    .items {
+      display: grid;
+      grid-gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      margin-bottom: 50px;
+    }
+
+  </style>
+
+  <div class="page">
+    <h2 class="primary-title">Task #1 HTML, CSS</h2>
+
+    <div class="items">
+      <a href="https://adiletttt.github.io/neobis/task-1-html-css/neobis-template/" class="item">
+        <h3 class="item__title">Neobis template 1</h3>
+        <p class="item__desc">markup from png</p>
+      </a>
+
+      <a href="https://adiletttt.github.io/neobis/task-1-html-css/cloudbudget/dist/" class="item">
+        <h3 class="item__title">CloudBudget</h3>
+        <p class="item__desc">makrup</p>
+      </a>
+
+      <a href="https://adiletttt.github.io/neobis/task-1-html-css/freebie/dist/" class="item">
+        <h3 class="item__title">Freebie</h3>
+        <p class="item__desc">markup</p>
+      </a>
+    </div>
+
+    <h2 class="primary-title">Task #2 Layout, Git</h2>
+
+    <div class="items">
+      <a href="https://adiletttt.github.io/neobis/task-1-html-css/template3/dist/" class="item">
+        <h3 class="item__title">Template 3</h3>
+        <p class="item__desc">markup</p>
+      </a>
+
+      <a href="https://adiletttt.github.io/neobis/task-1-html-css/template4/dist/" class="item">
+        <h3 class="item__title">Template 4</h3>
+        <p class="item__desc">markup</p>
+      </a>
+    </div>
+
+    <h2 class="primary-title">Task #3 Basic JS</h2>
+
+    <div class="items">
+      <a href="https://github.com/adiletttt/neobis/tree/master/task-3-js-basics" class="item">
+        <h3 class="item__title">Tasks</h3>
+        <p class="item__desc">Basic js tasks</p>
+      </a>
+
+      <a href="https://adiletttt.github.io/neobis/task-3-js-basics/2/02-8-draw-smile/" class="item">
+        <h3 class="item__title">Draw Smile</h3>
+        <p class="item__desc">Canvas drawer</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
