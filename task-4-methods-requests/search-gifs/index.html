@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Search GIFs</title>
+</head>
+<body>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fbfbfb;
+      font-family: sans-serif;
+    }
+
+    #wrapper {
+      padding: 15px;
+    }
+
+    .search-wrapper {
+      margin: 35px 15px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #searchInput {
+      border: 0.5px solid #ccc;
+      padding: 15px 20px;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 7px;
+      margin-right: 15px;
+      font-size: 16px;
+    }
+
+    #searchInput::placeholder {
+      font-size: 16px;
+    }
+
+    #searchButton {
+      border: 0;
+      background: tomato;
+      color: #fff;
+      font-size: 16px;
+      padding: 14px 25px;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 450px) {
+      .search-wrapper {
+        flex-flow: column;
+      }
+
+      #searchInput {
+        margin: 0 0 20px;
+      }
+    }
+
+    #items img {
+      width: 100%;
+      min-width: 200px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    #items {
+      columns: 4;
+      column-gap: 25px;
+    }
+
+    @media (max-width: 960px) {
+      #items {
+        columns: 3;
+      }
+    }
+
+    @media (max-width: 720px) {
+      #items {
+        columns: 2;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #items {
+        columns: 1;
+      }
+    }
+
+    .box {
+      background: #fff;
+      break-inside: avoid;
+      margin-bottom: 25px;
+      border-radius: 5px;
+      box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    }
+
+    .box p {
+      display: inline-block;
+      margin: 15px 10px;
+    }
+
+    #loading {
+      text-align: center;
+      margin: 150px auto;
+    }
+
+    .giphy {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  </style>
+  <div id="wrapper">
+    <div class="search-wrapper">
+      <input id="searchInput" placeholder="tom and jerry">
+      <button id="searchButton">Search</button>
+    </div>
+
+    <div class="giphy">
+      <a href="https://giphy.com/">
+        <img src="./PoweredBy_200_Horizontal_Light-Backgrounds_With_Logo.gif" alt="">
+      </a>
+    </div>
+
+    <div id="loading" style="display: none">
+      <!-- By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL -->
+      <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+        <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+        <stop stop-color="tomato" stop-opacity="0" offset="0%"/>
+        <stop stop-color="tomato" stop-opacity=".631" offset="63.146%"/>
+        <stop stop-color="tomato" offset="100%"/>
+        </linearGradient>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+        <g transform="translate(1 1)">
+        <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2">
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 18 18"
+          to="360 18 18"
+          dur="0.9s"
+          repeatCount="indefinite" />
+        </path>
+        <circle fill="tomato" cx="36" cy="18" r="1">
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 18 18"
+          to="360 18 18"
+          dur="0.9s"
+          repeatCount="indefinite" />
+        </circle>
+        </g>
+        </g>
+      </svg>
+    </div>
+    <div id="items">
+    </div>
+  </div>
+
+  <script>
+    const search = input => {
+      items.innerHTML = ''
+      loading.style.display = 'block'
+
+      fetch(`https://api.giphy.com/v1/gifs/search?api_key=L2DtUIO7148QGGDNbc6TX2f8DgLHg577&q=${input}`)
+        .then(res => res.json())
+        .then(data => {
+          data.data.forEach(gifObj => {
+            const preview = gifObj.images.preview_webp.url
+            const title = gifObj.title
+
+            const box = document.createElement('div')
+            const img = document.createElement('img')
+            const boxTitle = document.createElement('p')
+
+            img.src = preview
+            boxTitle.textContent = title
+            box.classList.add('box')
+            box.append(img)
+            box.append(boxTitle)
+            items.append(box)
+          })
+
+          loading.style.display = 'none'
+        })
+    }
+
+    searchButton.addEventListener('click', () =>
+      search(searchInput.value.trim()))
+  </script>
+</body>
+</html>
