@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Calculator</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="calc" class="mx-2 my-6 sm:mx-auto sm:max-w-md shadow-md rounded overflow-hidden">
+    <div class="col-span-full h-20 p-4 bg-red-400 text-red-900 border-b">
+      <div data-prev></div>
+      <div data-current></div>
+    </div>
+    <div class="grid grid-cols-4">
+      <button class="bg-orange-400 text-orange-900 py-4 border col-span-2" data-all-clear>AC</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-delete>DEL</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-operation>/</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>1</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>2</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>3</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-operation>*</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>4</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>5</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>6</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-operation>+</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>7</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>8</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>9</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-operation>-</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>.</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border" data-number>0</button>
+      <button class="bg-orange-400 text-orange-900 py-4 border col-span-2" data-equals>=</button>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
