@@ -4,61 +4,61 @@
       "id": 1,
       "name": "kitsune mask from \"Demon Slayer\"",
       "price": 120,
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/kitsune-mask-1.jpg"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/kitsune-mask-1.jpg"
     },
     {
       "id": 2,
       "price": 90,
       "name": "kitsune mask",
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/kitsune-mask-2.jpg"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/kitsune-mask-2.jpg"
     },
     {
       "id": 3,
       "name": "Anbu mask from \"Naturo\"",
       "price": 140,
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/anbu-black-ops-maks-1.webp"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/anbu-black-ops-maks-1.webp"
     },
     {
       "id": 4,
       "name": "Some Anbu mask from \"Naturo\"",
       "price": 100,
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/anbu-black-ops-maks-2.webp"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/anbu-black-ops-maks-2.webp"
     },
     {
       "id": 5,
       "name": "Obito's mask from \"Naruto\"",
       "price": 135,
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/obito-mask.jpg"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/obito-mask.jpg"
     },
     {
       "id": 6,
       "name": "Mask from \"Bleach\"",
       "price": 115,
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/bleach-mask-1.jpg"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/bleach-mask-1.jpg"
     },
     {
       "id": 7,
       "name": "Noface mask from \"Spirited Away\"",
       "price": 160,
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/noface-1.jpg"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/noface-1.jpg"
     },
     {
       "id": 8,
       "name": "some japanes demon mask 1",
       "price": 100,
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/demon-1.jpg"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/demon-1.jpg"
     },
     {
       "id": 9,
       "name": "some japanes demon mask 2",
       "price": 112,
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/demon-2.jpg"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/demon-2.jpg"
     },
     {
       "id": 10,
       "name": "some japanes demon mask 3",
       "price": 122,
-      "img": "https://adiletttt.github.io/neobis/task-8-js-mini-project/data/images/demon-3.jpg"
+      "img": "https://adiletttt.github.io/neobis/task-08-js-mini-project/data/images/demon-3.jpg"
     }
   ]
 }
